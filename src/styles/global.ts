@@ -13,7 +13,6 @@ const GlobalStyles: GlobalStyleComponent<
   GlobalStylesProps,
   DefaultTheme
 > = createGlobalStyle`
-
 @font-face {
   font-family: Rubik;
   src: local(Rubik-Light),
@@ -22,7 +21,6 @@ const GlobalStyles: GlobalStyleComponent<
   font-style: normal;
   font-stretch: normal;
    font-display: swap;
-
 }
 @font-face {
   font-family: Rubik;
@@ -51,36 +49,30 @@ const GlobalStyles: GlobalStyleComponent<
   font-stretch: normal;
   font-display: swap;
 }
-
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     &::before,
     &::after {
       box-sizing: inherit;
     }
   }
-
   ${({ theme, removeBg }) => css`
     html {
       font-size: 62.5%;
     }
-
     body {
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
-
       ${!removeBg &&
       css`
-        background-color: ${theme.colors.mainBg};
+        background-color: ${theme.colors.baseColorGray2};
       `}
     }
   `}
-
 `
 
 export default GlobalStyles
